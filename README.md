@@ -1,6 +1,7 @@
 <p align="center">
-<img src="https://github.com/HRT425/FishDiseaseCheck/assets/107521705/66ae48a8-52c6-44e2-a355-284ceb3f8eed" width=50%> 
+<img src="https://github.com/HRT425/FamilySNS-web-app/assets/107521705/b80d2b84-8f6f-4f66-b56f-e7f422123de1" width=20%> 
 </p>
+
 
 # ROOM ファミリー向けSNSアプリ
 
