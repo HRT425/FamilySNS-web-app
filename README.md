@@ -67,7 +67,7 @@ http://localhost:8000/ にアクセスできるか確認
 
 ### コンテナの停止
 
-vscode左下の >< というマークを選択し、「Close Remote Connection」をクリック
+vscode左下の >< というマークを選択し、「Close Remote Connection(もしくは「リモート接続を終了する」)」をクリック
 
 ## トラブルシューティング
 
