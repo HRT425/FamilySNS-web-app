@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    grid-template-columns: 10% 1fr;
+    height: 100%;
+}
+
+.container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #2ed9c3;
+}
+
+a {
+    color: black;
+}
+
+.container .logo img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.container .sidebar {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    white-space: nowrap;
+    max-width: 100%;
+    background: #2ed9c3;
+    position: relative;
+}
+
+.container .sidebar .home-logo {
+    padding: 20px;
+    text-decoration: none;
+}
+
+.container .sidebar a {
+    text-decoration: none;
+    text-decoration-color: none;
+    height: 100%;
+    width: 100%;
+}
+
+.container .sidebar .home-logo:hover {
+    background-color: #2ebba898;
+    font-weight: bold;
+}
+
+.container .sidebar .material-symbols-outlined {
+    font-size: 35px;
+}
+
+.container .sidebar .schedule-logo {
+    padding: 20px;
+}
+.container .sidebar .schedule-logo:hover {
+    background-color: #2ebba898;
+    font-weight: bold;
+}
+
+.container .sidebar .list-logo {
+    padding: 20px;
+}
+
+.container .sidebar .list-logo:hover {
+    background-color: #2ebba898;
+    font-weight: bold;
+}
+
+.container .sidebar .logout-logo {
+    padding: 20px;
+}
+
+.container .sidebar .logout-logo:hover {
+    background-color: #2ebba898;
+    font-weight: bold;
+}
+
+.container .main header h1 {
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    bottom: 10%;
+}
+
+.container .main .content {
+    grid-row: 2 / 3;
+    grid-column: 2/ 3;
+    background: #f5f5ef;
+    height: 100vh;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+
+.container .main .content .main-header{
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.container .main .content .main-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .main .content .main-content .material-symbols-outlined {
+    font-size: 100px;
+}
+
+.container .main .content .main-content .main-schedule {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.container .main .content .main-content .main-list {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.container .main-content .main-schedule:hover{
+    background-color: #a2a28ba0;
+    font-weight: bold;
+}
+
+.container .main-content .main-list:hover{
+    background-color: #a2a28ba0;
+    font-weight: bold;
+}

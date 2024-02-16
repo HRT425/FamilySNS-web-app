@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    tty: true
+    volumes:
+      - ../:/workspace
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: django_sample
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+  
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    tty: true
+    volumes:
+      - "./data/redis:/data"
+
+
+volumes:
+    mysql_data:

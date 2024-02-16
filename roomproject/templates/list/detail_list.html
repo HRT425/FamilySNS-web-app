@@ -1,0 +1,22 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'css/detail_list.css'%}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="detail-main">
+    <p class="title">場所:{{ object.title }}</p>
+    <p class="commodity">商品:{{ object.content }}</p>
+    <p class="author">投稿者:{{ object.user }}</p>
+    <p class="create_date">作成日: {{ object.create_date }}</p>
+    <p class="update_date">更新日: {{ object.update_date }}</p>
+    {% if object.user == request.user %}
+    <a href="{% url 'roomapp:update_list' object.pk %}">編集</a>
+    <a href="{% url 'roomapp:delete_list' object.pk %}">削除</a>
+    {% endif %}
+    <a href="{% url 'roomapp:list' %}">リストに戻る</a>
+</div>
+
+{% endblock content %}

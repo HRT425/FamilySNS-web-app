@@ -1,0 +1,31 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
+{% endblock customcss %}
+
+{% block content %}
+<div class="list">
+    <div class="list-header">
+        <h2>買い物リスト</h2>
+    </div>
+    <div class="list-side">
+        <a href="{% url 'roomapp:list' %}">home</a>
+        <a href="{% url 'roomapp:mylist' %}">自分の投稿</a>
+    </div>
+    {% for item in object_list %}
+    <ul>
+        <label for="test" name="list1">
+            <input type="checkbox" name="checkbox" id="test">
+            <li>場所：{{item.title}}</li>
+        </label>
+        <p class="date">作成日：{{item.create_date}}</p>
+        <a href="{% url 'roomapp:delete_list'  item.pk %}"><input type="button" value="削除" class="delete"></a>
+        <a href="{% url 'roomapp:detail_list'  item.pk %}"><input type="button" value="詳細" class="detail"></a>
+    </ul>
+    {% endfor %}
+    <a href="{% url 'roomapp:create_list' %}"><input type="button" value="作成" class="create"></a>
+</div>
+
+{% endblock content %}

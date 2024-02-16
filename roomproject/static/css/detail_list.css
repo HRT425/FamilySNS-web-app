@@ -1,0 +1,13 @@
+.detail-main {
+    margin: 50px;
+}
+
+.detail-main p {
+    margin: 30px;
+    width: 50%;
+    border-bottom: 1px solid;
+}
+
+.detail-main a {
+    margin: 30px;
+}

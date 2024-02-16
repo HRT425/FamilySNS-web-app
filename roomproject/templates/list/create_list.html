@@ -1,0 +1,17 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel="stylesheet" href="{% static 'css/create_list.css'%}">
+{% endblock customcss %}
+
+{% block content %}
+<h2>リストを作成する</h2>
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <p class="title">場所:<input type="text" name="title"></p>
+    <p class="commodity">商品:<input type="text" name="content"></p>
+    <input type="hidden" name="user" value="{{ user.username }}">
+    <input type="submit" value="create" id="create">
+</form>
+
+{% endblock content %}

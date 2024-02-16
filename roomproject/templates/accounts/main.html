@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
+    <!-- google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block customcss %}
+    {% endblock customcss %}
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="logo">
+        </div>
+        <div class="sidebar">
+            <div class="home-logo">
+                <a href="{% url 'roomapp:main'%}">
+                    <span class="material-symbols-outlined">home</span>
+                    <p class="text">ホーム</p>
+                </a>
+            </div>
+            <div class="schedule-logo">
+                <a href="{% url 'roomapp:schedule'%}">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    <p class="text">スケジュール</p>
+                </a>
+            </div>
+            <div class="list-logo">
+                <a href="{% url 'roomapp:list'%}">
+                    <span class="material-symbols-outlined">checklist</span>
+                    <p class="text">買い物リスト</p>
+                </a>
+            </div>
+            <div class="logout-logo">
+                <a href="{% url 'roomapp:logout' %}">
+                    <span class="material-symbols-outlined">logout</span>
+                    <p class="text">ログアウト</p>
+                </a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content">
+                {% block content %}
+                <div class="main-content">
+                    <div class="main-schedule">
+                        <a href="{% url 'roomapp:schedule'%}">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            <p class="text">スケジュール</p>
+                        </a>
+                    </div>
+                    <div class="main-list">
+                        <a href="{% url 'roomapp:list'%}">
+                            <span class="material-symbols-outlined">checklist</span>
+                            <p class="text">買い物リスト</p>
+                        </a>
+                    </div>
+                </div>
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="{% static 'js/main.js' %}"></script>
+
+</html>

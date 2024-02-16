@@ -1,0 +1,89 @@
+.list-header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    background-color: #39b4a3;
+}
+
+.list-side {
+    margin: 20px;
+}
+
+.list-side a {
+    margin-right: 20px;
+}
+
+.list .list-main {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.list ul {
+    list-style: none;
+    margin: 20px 10%;
+    max-width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid ;
+    font-size: 20px;
+    
+}
+
+.list ul  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.list ul  label {
+    display: flex;
+    position: absolute;
+    left: 0;
+
+}
+
+.list ul input[type=checkbox] {
+    transform: scale(1.5);
+    margin: 10px;
+}
+
+.list ul  li {
+    padding: 10px;
+}
+
+.list ul .date {
+    font-size: 16px;
+}
+
+.list ul a .delete {
+    margin: 10px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: orange;
+}
+
+.list ul a .detail {
+    margin: 10px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    background: aqua;
+}
+
+.list a .create {
+    margin: 10px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    right: 130px;
+    background: pink;
+}
